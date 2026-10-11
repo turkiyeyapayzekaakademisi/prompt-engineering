@@ -1,0 +1,42 @@
+{
+  "zero_shot": {
+    "aciklama": "Örnek vermeden müşteri mesajını sınıflandırma",
+    "system": "Türkçe yanıt veren bir asistansın.",
+    "prompt": "Aşağıdaki müşteri mesajını değerlendir ve talebin türünü belirt.\n\nMüşteri mesajı:\n{{mesaj}}"
+  },
+  "one_shot": {
+    "aciklama": "Tek örnekle beklenen sınıflandırmayı gösterme",
+    "system": "Türkçe yanıt veren bir asistansın.",
+    "prompt": "Müşteri mesajını sınıflandır.\n\nÖrnek:\nMesaj: Kargom üç gündür gelmedi.\nKategori: Şikayet\n\nŞimdi bunu sınıflandır:\nMesaj: {{mesaj}}\nKategori:"
+  },
+  "few_shot": {
+    "aciklama": "Birden fazla örnekle kategorileri ve çıktı biçimini gösterme",
+    "system": "Türkçe yanıt veren bir asistansın.",
+    "prompt": "Müşteri mesajını aşağıdaki örnekler gibi sınıflandır.\n\nMesaj: Ürün hasarlı geldi.\nKategori: Şikayet\n\nMesaj: Teslimat süreniz kaç gün?\nKategori: Bilgi Talebi\n\nMesaj: Mobil uygulamaya karanlık mod ekleyebilirsiniz.\nKategori: Öneri\n\nMesaj: {{mesaj}}\nKategori:"
+  },
+  "rol_verme": {
+    "aciklama": "Kurumsal müşteri temsilcisi rolünü tanımlama",
+    "system": "Deneyimli ve profesyonel bir müşteri destek uzmanısın. Türkçe yanıt ver.",
+    "prompt": "Şu müşteri mesajının hangi tür talep olduğunu belirle ve bir cümleyle açıkla:\n{{mesaj}}"
+  },
+  "baglam_ekleme": {
+    "aciklama": "Kuruma özgü sınıflandırma bilgisi sağlama",
+    "system": "Bir e-ticaret şirketinin destek taleplerini analiz ediyorsun.",
+    "prompt": "Şirket politikası: Ürün arızaları Şikayet; ürün/hizmet hakkında soru Bilgi Talebi; yeni özellik istekleri Öneri olarak işaretlenir.\n\nBu bağlama göre mesajı sınıflandır:\n{{mesaj}}"
+  },
+  "hedef_kitle": {
+    "aciklama": "Yönetim ekibine uygun seviyede anlatım isteme",
+    "system": "Kurumsal müşteri hizmetleri analistisin.",
+    "prompt": "Aşağıdaki müşteri mesajını sınıflandır ve üst yönetime yönelik teknik olmayan, kısa bir açıklama yaz:\n{{mesaj}}"
+  },
+  "kisit_belirleme": {
+    "aciklama": "Kategori ve uzunluk sınırları tanımlama",
+    "system": "Türkçe yanıt veren bir asistansın.",
+    "prompt": "Mesajı yalnızca Şikayet, Bilgi Talebi veya Öneri olarak sınıflandır. En fazla iki cümle yaz. Mesajda bulunmayan bilgi uydurma.\n\nMesaj:\n{{mesaj}}"
+  },
+  "cikti_formati": {
+    "aciklama": "JSON biçiminde yanıt isteme (bu yalnızca prompt talimatıdır)",
+    "system": "Türkçe yanıt veren bir asistansın.",
+    "prompt": "Aşağıdaki mesajı sınıflandır. Sadece geçerli JSON döndür: {{\"kategori\": \"Şikayet/Bilgi Talebi/Öneri\", \"gerekce\": \"kısa açıklama\"}}.\n\nMesaj:\n{{mesaj}}"
+  }
+}
